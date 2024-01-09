@@ -20,7 +20,7 @@ jobs:
       with:
         args: >
           -Dsonar.organization=mohandevsecops
-          -Dsonar.projectKey=mohandevsecops
+          -Dsonar.projectKey=mohandevsecops_mohandevsecops
   security:
     runs-on: ubuntu-latest
     needs: build

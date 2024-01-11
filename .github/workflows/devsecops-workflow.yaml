@@ -58,7 +58,7 @@ jobs:
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@master
         with:
-          image-ref: 'hello world'
+          image-ref: 'nginx:1.19.6'
           format: 'table'
           # exit-code: '1'
           continue-on-error: true

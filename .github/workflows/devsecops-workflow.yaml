@@ -48,3 +48,19 @@ jobs:
           target: 'http://example.com/'
           rules_file_name: '.zap/rules.tsv'
           cmd_options: '-a'
+  OSS_scanning:
+    name: Scan Container for Security Issues
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Run Trivy vulnerability scanner
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: 'hello world'
+          format: 'table'
+          exit-code: '1'
+          ignore-unfixed: true
+          vuln-type: 'os,library'
+          severity: 'CRITICAL'

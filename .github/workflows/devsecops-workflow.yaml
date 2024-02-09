@@ -55,7 +55,7 @@ jobs:
           rules_file_name: '.zap/rules.tsv'
           cmd_options: '-a'
   OSS_scanning:
-    name: Scan Container for Security Issues
+    name: Run OSS Scan 
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
